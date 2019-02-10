@@ -1,0 +1,12 @@
+C:\Users\HiCla\source\repos\Demo1\Demo1\bin\iPhoneSimulator\Debug\Demo1.exe
+C:\Users\HiCla\source\repos\Demo1\Demo1\bin\iPhoneSimulator\Debug\Demo1.pdb
+C:\Users\HiCla\source\repos\Demo1\Demo1\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\HiCla\source\repos\Demo1\Demo1\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
+C:\Users\HiCla\source\repos\Demo1\Demo1\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\HiCla\source\repos\Demo1\Demo1\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
+C:\Users\HiCla\source\repos\Demo1\Demo1\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Users\HiCla\source\repos\Demo1\Demo1\obj\iPhoneSimulator\Debug\optimized\
+C:\Users\HiCla\source\repos\Demo1\Demo1\obj\iPhoneSimulator\Debug\Demo1.csproj.CoreCompileInputs.cache
+C:\Users\HiCla\source\repos\Demo1\Demo1\obj\iPhoneSimulator\Debug\Demo1.exe
+C:\Users\HiCla\source\repos\Demo1\Demo1\obj\iPhoneSimulator\Debug\Demo1.pdb
+C:\Users\HiCla\source\repos\Demo1\Demo1\obj\iPhoneSimulator\Debug\Demo1.csprojAssemblyReference.cache

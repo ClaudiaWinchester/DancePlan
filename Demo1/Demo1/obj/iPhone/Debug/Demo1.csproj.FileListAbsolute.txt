@@ -1,0 +1,12 @@
+C:\Users\HiCla\source\repos\Demo1\Demo1\bin\iPhone\Debug\Demo1.exe
+C:\Users\HiCla\source\repos\Demo1\Demo1\bin\iPhone\Debug\Demo1.pdb
+C:\Users\HiCla\source\repos\Demo1\Demo1\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\HiCla\source\repos\Demo1\Demo1\obj\iPhone\Debug\actool\_PartialAppManifest.items
+C:\Users\HiCla\source\repos\Demo1\Demo1\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\HiCla\source\repos\Demo1\Demo1\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
+C:\Users\HiCla\source\repos\Demo1\Demo1\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Users\HiCla\source\repos\Demo1\Demo1\obj\iPhone\Debug\optimized\
+C:\Users\HiCla\source\repos\Demo1\Demo1\obj\iPhone\Debug\Demo1.csprojAssemblyReference.cache
+C:\Users\HiCla\source\repos\Demo1\Demo1\obj\iPhone\Debug\Demo1.csproj.CoreCompileInputs.cache
+C:\Users\HiCla\source\repos\Demo1\Demo1\obj\iPhone\Debug\Demo1.exe
+C:\Users\HiCla\source\repos\Demo1\Demo1\obj\iPhone\Debug\Demo1.pdb
