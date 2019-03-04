@@ -1,0 +1,52 @@
+div{
+	margin: 5px 5px 5px 5px;
+	text-align: center;
+
+}
+
+h1{
+	color: purple;
+	font-family: "Gill Sans MT Condensed";
+	font-size: 22px;
+	font-weight: lighter;
+	text-align: justify-all;
+}
+
+#username, #password{
+	background: #c8a2c8;
+	color: darkgray;
+	font-family: "Gill Sans MT Condensed";
+	text-align: center;
+	width: 200px;
+}
+
+#submitButton{
+	background-color: purple;
+	color: white;
+	font-family: "Gill Sans MT Condensed";
+	align-items: center;
+	width: 100px;
+	height: 30px;
+}
+
+.icon{
+	width: 50px;
+	height: 50px;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}

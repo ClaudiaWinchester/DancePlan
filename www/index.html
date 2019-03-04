@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <!-- <link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.0rc2.css" type="text/css" charset="utf-8" /> -->
+        <link rel="stylesheet" href="style.css" type="text/css" media=screen>
+        <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/phonegap-1.2.0.js"></script>
+        <script src="jquery.mobile/jquery.mobile-1.0rc2.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/main.js"></script><title>Login DancePlan</title>
+    </head>
+    <body onload="init()">
+	
+<div id="loginPage" data-role="page">
+	<div>
+		<img src = "img/Logo.jpg" width = "200" height = "200">
+	</div>
+
+	<div data-role="header">
+		<h1>Inicia sesión</h1>
+	</div>
+
+	<div data-role="content">	
+		<form id="loginForm">
+		<div data-role="fieldcontain" class="ui-hide-label">
+			<!-- <label for="username">Usuario</label> -->
+			<input type="text" name="username" id="username" value="" placeholder="Usuario" />
+		</div>
+
+		<div data-role="fieldcontain" class="ui-hide-label">
+			<!-- <label for="password">Contraseña</label> -->
+			<input type="password" name="password" id="password" value="" placeholder="Contraseña" />
+		</div>
+
+		<input type="submit" value="Entrar" id="submitButton">
+		</form>
+		
+	</div>
+
+	<div data-role="footer">
+	</div>
+
+	<div>
+		<img src = "img/fb.png" class = "icon">
+		<img src = "img/email.png" class = "icon">
+	</div>
+</div>
+
+<script>
+    $("#loginPage").live("pageinit", function(e) {
+		checkPreAuth();
+	});
+</script>
+
+</body>
+</html>
