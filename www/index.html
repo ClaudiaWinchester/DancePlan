@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"> -->
+        <!-- App ID: 716812768715117 -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
         <!-- <link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.0rc2.css" type="text/css" charset="utf-8" /> -->
@@ -10,9 +11,11 @@
         <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/phonegap-1.2.0.js"></script>
         <script src="jquery.mobile/jquery.mobile-1.0rc2.js"></script>
-        <script type="text/javascript" charset="utf-8" src="js/main.js"></script><title>Login DancePlan</title>
+        <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
     </head>
     <body onload="init()">
+    	<div id="fb-root"></div>
+    	<script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
 	
 <div id="loginPage" data-role="page">
 	<div>
@@ -43,7 +46,7 @@
 	<div data-role="footer">
 	</div>
 
-	<div>
+	<div class="fb-login-button" data-size="large" data-button-type="continue_with" data-auto-logout-link="true" data-use-continue-as="true">
 		<img src = "img/fb.png" class = "icon">
 		<img src = "img/email.png" class = "icon">
 	</div>
