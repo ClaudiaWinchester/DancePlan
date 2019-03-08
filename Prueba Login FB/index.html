@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css" type="text/css" media=screen>
+  <title>Facebook SDK Demo</title>
+</head>
+
+<body>
+  <h1>Facebook Demo</h1>
+
+  <div id = "buttons">
+    <h2>Botones</h2>
+
+    <div>
+      <button type="button" id="share-button">Compartir</button>
+      <button type="button" id="like-button">Me gusta</button>
+      <button type="button" id="send-button">Enviar</button>
+    </div>
+  </div>
+
+  <div id="login-buttons">
+    <h3>Botón estándar de Facebook</h3>
+    <fb:login-button size="large" scope="public_profile, email" returnscopes="true" onlogin="myapp.checkLoginState();">
+      Continuar como 
+    </fb:login-button>
+
+    <h3>Botón personalizado de Facebook</h3>
+    <div id="spinner">Cargando
+    <div class = "fb-login-button"
+        data-max-rows="1"
+        data-size="large"
+        data-button-type="continue_with"
+        data-use-continue-as="true"></div>
+    </div>
+
+    <h3>Botón de login personalizado</h3>
+    <button id="custom-login-button">Entrar con Facebook</button>
+  </div>
+
+  <h3>Status:</h3>
+  <div id="status"></div>
+
+  <script type="text/javascript">
+    function statusChangeCallback(response){
+      console.log('running statusChangeCallback...');
+      console.log(response);
+
+      //Status actual del login de la persona
+      if(response.status === 'connected'){
+        //Logueado en FB
+        document.getElementById('status').innerHTML = 'connected!';
+
+        //Mostrar datos del usuario
+        FB.api('/me', function(response){
+          console.log('Login exitoso para: ' + response.name);
+          document.getElementById('status').innerHTML = '¡Gracias por loguearte, ' + response.name + '!';
+        });
+      }
+      else{
+        //La persona no se ha logueado o no se puede determinar si se logueó
+        document.getElementById('status').innerHTML = 'Por favor loguéate en esta app.';
+
+        //Si no se llama con el click del usuario, puede estar bloqueado por popups
+        FB.login(function (response){
+          console.log(response);
+        }, {
+          scope: 'email',
+          //return_scopes: true
+        });
+      }
+    }
+
+    window.fbAsyncInit = function (){
+      //FB JavaScript, función para configurar SDK
+      FB.init({
+        appId: '716812768715117', //ID de la App
+        cookie: true, //Activa cookies
+        xfbml: true, //Parse social plugins
+        version: 'v3.2' //Versión 3.2 de la API
+      });
+
+      //Revisar login de usuario
+      FB.getLoginStatus(function (response){
+        statusChangeCallback(response);
+      });
+    }
+
+    document.getElementById('share-button').addEventListener('click', function(){
+      FB.ui({
+        method: 'share',
+        href: window.location.href
+      }, function(response){
+        //Debug response
+        console.log(response);
+      });
+    });
+
+    document.getElementById('like-button').addEventListener('click', function(){
+      FB.ui({
+        method: 'share_open_graph',
+        action_type: 'og.likes',
+        action_properties: JSON.stringify({
+          object: 'https://www.wattpad.com/user/ClaudiaWinchester'
+        })
+      }, function(response){
+        //Debug response
+        console.log(response);
+      });
+    });
+
+    document.getElementById('send-button').addEventListener('click', function(){
+      FB.ui({
+        method: 'send',
+        link: 'https://www.wattpad.com/user/ClaudiaWinchester'
+      }, function(response){
+        //Debug response
+        console.log(response);
+      });
+    });
+
+    document.getElementById("custom-login-button").addEventListener('click', function(){
+      FB.login(function (response){
+        console.log('Login personalizado');
+        console.log(response);
+
+        FB.api('/me', 'get', {fields: 'id, name, about, created_time, category'}, function(response){
+          console.log(response);
+        });
+    }, {
+      scope: 'email'
+      //return_scopes: true
+    });
+});
+
+    // Cargar el SDK de forma asíncrona
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+</body>
+</html>
