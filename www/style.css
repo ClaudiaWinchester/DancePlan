@@ -42,7 +42,7 @@ h1{
 	font-family: "Gill Sans MT Condensed";
 	font-size: 25px;
 	font-weight: lighter;
-	text-align: justify-all;
+	text-align: center;
 }
 
 h2{
@@ -112,4 +112,8 @@ h2{
   background-image: linear-gradient(#4C69BA, #3B55A0);
   /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
   /*text-shadow: 0 -1px 0 #354C8C;*/
+}
+
+#fotoGal{
+	width: 100px;
 }
