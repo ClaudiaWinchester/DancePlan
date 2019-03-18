@@ -1,6 +1,6 @@
 function handleLogin() {
 	var form = $("#loginForm");	
-	//disable the button so we can't resubmit while we wait
+	//Deshabilitar botón mientras se hace login
 	$("#submitButton",form).attr("disabled","disabled");
 	var u = $("#username", form).val();
 	var p = $("#password", form).val();
