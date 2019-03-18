@@ -1,0 +1,22 @@
+<input id="inputIQ" type="number"/>
+<button onclick="inputIQFunction()">Submit</button>
+<script>
+function inputIQFunction()
+{
+var userinput = document.getElementById("inputIQ").value;
+switch (userinput) {
+
+case userinput <= 10:
+alert("Less than 10");
+break;
+
+case userinput > 10:
+alert("Greater than 10");
+break;
+
+default:
+alert("Please input value");
+break;
+}
+}
+</script>
