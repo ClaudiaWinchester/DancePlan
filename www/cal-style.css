@@ -1,20 +1,20 @@
 body { 
-    background: #e0e0e0; 
+    background: white; 
 } 
  
 #cal { 
     -moz-box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25); 
     -webkit-box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25); 
     margin:50px auto; 
-    font: 13px/1.5 "Helvetica Neue", Helvatica, Arial, san-serif; 
+    font: 13px/1.5 "Gill Sans MT Condensed"; 
     display:table; 
 }
 
 #cal .header { 
     cursor:default; 
     background: #cd310d; 
-    background: -moz-linear-gradient(top, #b32b0c, #cd310d); 
-    background: -webkit-gradient(linear, left top, left bottom, from(#b32b0c), to(#cd310d)); 
+    background: white; 
+    background-color: purple; 
     height: 34px; 
     position: relative; 
     color:#fff; 
@@ -65,19 +65,18 @@ body {
     -webkit-border-top-left-radius: 5px; 
     -moz-border-radius-topleft: 5px; 
     border-top-left-radius: 5px; 
-    border-right:1px solid #ae2a0c; 
+    border-right:2px solid #c8a2c8; 
 } 
 #cal .header .right.button { 
     right:0; 
     top:0; 
-    border-left:1px solid #ae2a0c; 
+    border-left:2px solid #c8a2c8; 
     -webkit-border-top-right-radius: 5px; 
     -moz-border-radius-topright: 5px; 
     border-top-right-radius: 5px; 
 } 
 #cal .header .button:hover { 
-    background: -moz-linear-gradient(top, #d94215, #bb330f); 
-    background: -webkit-gradient(linear, left top, left bottom, from(#d94215), to(#bb330f)); 
+    background: #c8a2c8; 
 }
 
 #cal .header .month-year { 
@@ -119,10 +118,8 @@ body {
 } 
 #cal #cal-frame td:not(.nil):hover { 
     color:#fff; 
-    text-shadow: #6C1A07 0px -1px; 
-    background:#CD310D; 
-    background: -moz-linear-gradient(top, #b32b0c, #cd310d); 
-    background: -webkit-gradient(linear, left top, left bottom, from(#b32b0c), to(#cd310d)); 
+    text-shadow: #6C1A07 0px -1px;  
+    background: #c8a2c8; 
     -moz-box-shadow:0px 0px 0px; 
     -webkit-box-shadow:0px 0px 0px; 
 }
@@ -143,4 +140,11 @@ body {
 } 
 #cal #cal-frame table.temp { 
     position:absolute; 
+}
+
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
 }

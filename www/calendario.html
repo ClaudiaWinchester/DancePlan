@@ -2,11 +2,19 @@
   <html> 
   <head> 
       <meta charset="utf-8" /> 
-      <title>Organizar agenda</title> 
-      <link rel="stylesheet" href="cal-style.css" /> 
+      <meta charset="utf-8">
+        <!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"> -->
+        <!-- App ID: 716812768715117 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Organizar agenda</title>     
+        <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/phonegap-1.2.0.js"></script>
+        <script src="jquery.mobile/jquery.mobile-1.0rc2.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+        <link rel="stylesheet" href="cal-style.css"/>
     <script type="text/javascript">
       	var cal = CALENDAR(); 
-  		cal.init();
+  		  cal.init();
   	</script>
 
   </head> 
@@ -15,7 +23,7 @@
   	    <div class="header"> 
   	    	<span class="left button" id="prev"> &lang; </span> 
   	    	<span class="left hook"></span> 
-  	    	<span class="month-year" id="label"> June 20&& </span> 
+  	    	<span class="month-year" id="label"> Abril 2019 </span> 
   	    	<span class="right hook"></span> 
   	    	<span class="right button" id="next"> &rang; </span>
   	    </div> 
@@ -33,11 +41,11 @@
     	<div id="cal-frame"> 
     	<table class="curr"> 
     		<tbody> 
-        		<tr><td class="nil"></td><td class="nil"></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr> 
-        		<tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td class="today">11</td><td>12</td></tr> 
-        		<tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr> 
-        		<tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr> 
-        		<tr><td>27</td><td>28</td><td>29</td><td>30</td><td class="nil"></td><td class="nil"></td><td class="nil"></td></tr> 
+        		<tr><td class="nil"></td><td class="nil">1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr> 
+        		<tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td class="today">12</td><td>13</td></tr> 
+        		<tr><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr> 
+        		<tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td></tr> 
+        		<tr><td>28</td><td>29</td><td>30</td><td class="nil"></td><td class="nil"></td><td class="nil"></td></tr> 
     		</tbody> 
 		</table>
     	</div>

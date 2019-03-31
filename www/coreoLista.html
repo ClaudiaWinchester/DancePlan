@@ -13,8 +13,8 @@
         <script src="jquery.mobile/jquery.mobile-1.0rc2.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
         <script type="text/javascript">
-            function funcCoreo(){
-                var pasosBaile = ["Fly", "Fly con bulla", "Fly montañero", "Para abajo", "Enchufla", "Enchufla doble", "Enchufla triple",
+                function funcCoreo(){
+                    var pasosBaile = ["Fly", "Fly con bulla", "Fly montañero", "Para abajo", "Enchufla", "Enchufla doble", "Enchufla triple",
                     "Dame una", "Torniquete", "Para arriba", "La prima", "La mujer manda", "Cachito", "Cachito doble",
                     "Cachito de jamón", "Traquetea", "Yogurt", "Yogurt invertido", "Cachito hasta la tuya", "Cachito de la mujer",
                     "Cachito de jamón de la mujer", "Cachito hasta el tuyo", "Al centro, Mata la cucaracha, Quedó viva, A lo moderno, Era una rata", "Saca agua del pozo", "El hombre orina", "La mujer orina", "Sombrero", "Vacuna", "Prima con la hermana",
@@ -25,41 +25,23 @@
                 var posicionesElegidas=[];
                 var i,j,r,c;
 
-            for(i=0; i<20; i++){
-                r = Math.floor(Math.random()*(pasosBaile.length-posicionesElegidas.length))+1;
-                c = 0;
-                j = 0;
-                do if (posicionesElegidas.indexOf(j++)==-1) c++; while(c<r);
-                j--;
-                coreoRandom.push(pasosBaile[j]);
-                posicionesElegidas.push(j);
-                document.write(coreoRandom[i] + "<br/>");
-                //document.getElementById("textcoreo").innerHTML += coreoRandom[i] + "<br/>";   
-            }
-        }    
-        </script>
+    for(i=0; i<20; i++){
+        r = Math.floor(Math.random()*(pasosBaile.length-posicionesElegidas.length))+1;
+        c = 0;
+        j = 0;
+        do if (posicionesElegidas.indexOf(j++)==-1) c++; while(c<r);
+        j--;
+        coreoRandom.push(pasosBaile[j]);
+        posicionesElegidas.push(j);
+        document.write(coreoRandom[i] + "<br/>");
+        //document.getElementById("textcoreo").innerHTML += coreoRandom[i] + "<br/>";   
+    }
+}       
+       </script>
     </head>
-    <body id="bodycoreo">	
-    	<div>
-    		<div id="titulocoreo">Crear coreografía
-    		</div>
-
-		<div id="coreografia">
-			<div id="textcoreo">
-                <script type="text/javascript">funcCoreo();</script>
-			</div>
-		</div>
-
-		<div>
-            <div>
-                <form>
-                <a href="menu.html"><img src = "img/btn_Back.png" class = "icon"></a>
-                <!-- <a href="coreoLista.html"><img src = "img/btn_Random.png" class = "icon"></a> -->
-                <!-- <input type="image" name="coreoAleatoria" class = "icon" src = "img/btn_Random.png" onclick="funcCoreo()"> -->
-                <input type="image" name="coreoAleatoria" class = "icon" src = "img/btn_Random.png">
-                </button>
-                </form>
-            </div>
-		</div>
+    <body id="bodycoreo">
+    		<div id="titulocoreo">Crear coreografía</div>
+            <div><script>funcCoreo();</script></div>
+            
 </body>
 </html>
