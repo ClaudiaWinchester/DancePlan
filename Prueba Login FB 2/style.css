@@ -1,0 +1,39 @@
+body {
+  margin: 100px auto;
+  text-align: center;
+  width: 400px;
+}
+h1 {
+  margin-bottom: 30px;
+}
+
+#status{
+	border: solid 1px #ccc;
+	font-family: 'Courier New';
+	font-size: .75rem;
+	padding: .8rem;
+}
+
+#spinner{
+	background: #4267b2;
+	border-radius: 5px;
+	color: white;
+	height: 40px;
+	text-align: center;
+	width: 250px;
+}
+
+h3{
+	margin-bottom: 5px;
+}
+
+strong, img {
+  display: block;
+}
+img {
+  margin: 0 auto;
+  border-radius: 10px;
+}
+#logout {
+  margin-top: 10px;
+}

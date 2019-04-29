@@ -1,0 +1,87 @@
+<!DOCTYPE html>  
+<html>
+    <head>  
+      <meta charset="UTF-8">
+      <title>Facebook SDK Demo</title>  
+      <style>
+        #status {border: solid 1px #ccc; font-family: 'Courier New'; font-size: .75rem; padding: .8rem;}
+      </style>
+    </head>  
+    <body>
+      <h1>Facebook SDK Demo</h1>
+
+      <div id="buttons">
+        <h2>Buttons</h2>
+        <div id="login-buttons">
+          <h3>Botón de login personalizado</h3>
+          <button id="custom-login-button">Conectar a Facebook</button>
+        </div>
+        
+      </div>
+
+      <h3 style="margin-bottom: 5px;">Status</h3>
+      <div id="status"></div>
+
+      <script>
+        function statusChangeCallback(response){
+          console.log('Corriendo statusChangeCallback...');
+          console.log(response);
+
+          if(response.status==='connected'){
+            document.getElementById('status').innerHTML='connected!';
+
+            FB.api('/me', function (response){
+              console.log('Login exitoso para ' + response.name);
+              document.getElementById('status').innerHTML = 'Gracias por loguearte, ' + response.name + '!';
+            });
+          }
+          else{
+            document.getElementById('status').innerHTML = 'Por favor loguéate a esta app.';
+
+            FB.login(function(response){
+              console.log(response);
+            }, {
+                scope: 'email',
+                return_scopes: true
+                });
+            }
+        }
+
+        window.fbAsyncInit=function(){
+          FB.init({
+            appId: '716812768715117',
+            cookie: true,
+            xfbml: true,
+            version: 'v3.2'
+          });
+
+          FB.getLoginStatus(function(response){
+            statusChangeCallback(response);
+          });
+        }
+
+        document.getElementById("custom-login-button").addEventListener('click', function(){
+          FB.login(function(response){
+            console.log("Login personalizado completo.");
+            console.log(response);
+
+            FB.api('/me', 'get', {fields: 'id, name, about, created_time, category'}, function(response){
+              console.log(response);
+            });
+          }, {
+            scope: 'email',
+            return_scopes: true
+          });
+        });
+
+    //Load the JavaScript SDK asynchronously
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+    </body>  
+</html>
