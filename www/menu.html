@@ -8,13 +8,17 @@
         <title>Menú principal</title>
         <!-- <link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.0rc2.css" type="text/css" charset="utf-8" /> -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css" type="text/css" media=screen>
+        <link rel="stylesheet" href="estilos.css" type="text/css" media=screen>
         <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/phonegap-1.2.0.js"></script>
         <script src="jquery.mobile/jquery.mobile-1.0rc2.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
     </head>
-    <body>	
+    <body>
+        <div id="bannerIdent">
+            <img src = "img/ban_DP.png" width = "100" align="center">
+        </div>
+
     	<div id="menuPage" data-role="page">
     		<div>
     			<h2>¿Qué quieres hacer?</h2>
@@ -22,9 +26,8 @@
 
 	<div data-role="menu">	
 		<form id="menuForm">
-			<div><a href="coreo.html"><input type="button" value="Crear coreografía" id="menuButton"></div>
-			<div><a href="calendario.html"><input type="button" value="Organizar agenda" id="menuButton"></div>
-			<div><a href="menuGaleria.html"><input type="button" value="Crear galería" id="menuButton"></div>
+			<div><a href="coreo.html"><input type="button" value="Crear coreografía" id="botonMenu"></div>
+			<div><a href="menuGaleria.html"><input type="button" value="Crear galería" id="botonMenu"></div>
 		</form>
 	</div>
 </body>

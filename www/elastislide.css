@@ -1,16 +1,16 @@
 /* Elastislide Style */
 
-.elastislide-list {
+.elasti-lista {
 	list-style-type: none;
 	display: none;
 }
 
-.no-js .elastislide-list {
+.no-js .elasti-lista {
 	display: block;
 }
 
 .elastislide-carousel ul li {
-	min-width: 20px; /* minimum width of the image (min width + border) */
+	min-width: 20px; /* ancho mínimo de imagen + borde */
 }
 
 .elastislide-wrapper {

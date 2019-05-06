@@ -2,20 +2,17 @@
     <head>
         <title>Galería de Vestuario</title>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
-        <meta name="description" content="Elastislide - A Responsive Image Carousel" />
-        <meta name="keywords" content="carousel, jquery, responsive, fluid, elastic, resize, thumbnail, slider" />
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" href="style.css" type="text/css" media=screen>
+		<link rel="stylesheet" href="estilos.css" type="text/css" media=screen>
 		<script src="js/modernizr.custom.17475.js"></script>
     </head>
     <body>
-		<div class="gallery">
+		<div class="galeria">
+		<div id="bannerIdent">
+            <img src = "img/ban_DP.png" width = "100" align="center">
+        </div>
 		<!-- Elastislide Carousel -->
 		<h1>Galería de Vestuario</h1>
-			<ul id="carousel" class="elastislide-list">
+			<ul id="carousel" class="elasti-lista">
 				<li data-preview="img/a.jpg"><a href="#"><img id="fotoGal" src="img/a.jpg"/></a></li>
 				<li data-preview="img/b.jpg"><a href="#"><img id="fotoGal" src="img/b.jpg"/></a></li>
 				<li data-preview="img/c.jpg"><a href="#"><img id="fotoGal" src="img/c.jpg"/></a></li>
@@ -30,7 +27,7 @@
 				<li data-preview="img/l.jpg"><a href="#"><img id="fotoGal" src="img/l.jpg"/></a></li>
 			</ul>
 			<!-- End Elastislide Carousel -->
-			<div class="image-preview">
+			<div class="preImagen">
 				<img id="preview" src="img/a.jpg" />
 			</div>
 		</div>
@@ -39,27 +36,27 @@
 		<script type="text/javascript" src="js/jquery.elastislide.js"></script>
 		<script type="text/javascript">
 			
-			// example how to integrate with a previewer
-			var current = 0,
+			// Integrar con previsualizador
+			var actual = 0,
 				$preview = $( '#preview' ),
 				$carouselEl = $( '#carousel' ),
 				$carouselItems = $carouselEl.children(),
 				carousel = $carouselEl.elastislide( {
-					current : current,
+					actual : actual,
 					minItems : 4,
 					onClick : function( el, pos, evt ) {
 						changeImage( el, pos );
 						evt.preventDefault();
 					},
 					onReady : function() {
-						changeImage( $carouselItems.eq( current ), current );
+						changeImage( $carouselItems.eq( actual ), actual );
 					}
 				} );
 
 			function changeImage( el, pos ) {
 				$preview.attr( 'src', el.data( 'preview' ) );
-				$carouselItems.removeClass( 'current-img' );
-				el.addClass( 'current-img' );
+				$carouselItems.removeClass( 'actual-img' );
+				el.addClass( 'actual-img' );
 				carousel.setCurrent( pos );
 			}
 		</script>

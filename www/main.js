@@ -6,9 +6,9 @@ function init() {
 
 function checkPreAuth() {
 	var form = $("#loginForm");
-	if(window.localStorage["username"] != undefined && window.localStorage["password"] != undefined) {
-		$("#username", form).val(window.localStorage["username"]);
-		$("#password", form).val(window.localStorage["password"]);
+	if(window.localStorage["usuario"] != undefined && window.localStorage["contrasena"] != undefined) {
+		$("#usuario", form).val(window.localStorage["usuario"]);
+		$("#contrasena", form).val(window.localStorage["contrasena"]);
 		handleLogin();
 	}
 }
@@ -16,31 +16,31 @@ function checkPreAuth() {
 function handleLogin() {
 	var form = $("#loginForm");	
 	//Deshabilitar botón mientras hace login
-	$("#submitButton",form).attr("disabled","disabled");
-	var u = $("#username", form).val();
-	var p = $("#password", form).val();
+	$("#botonEnviar",form).attr("disabled","disabled");
+	var u = $("#usuario", form).val();
+	var p = $("#contrasena", form).val();
 	console.log("click");
 	if(u != '' && p!= '') {
-		$.post("https://www.coldfusionjedi.com/demos/2011/nov/10/service.cfc?method=login&returnformat=json", {username:u,password:p}, function(res) {
+		$.post("https://www.coldfusionjedi.com/demos/2011/nov/10/service.cfc?method=login&returnformat=json", {usuario:u,contrasena:p}, function(res) {
 			if(res == true) {
-				//store
-				window.localStorage["username"] = u;
-				window.localStorage["password"] = p;        			
+				//Almacenar
+				window.localStorage["usuario"] = u;
+				window.localStorage["contrasena"] = p;        			
 				$.mobile.changePage("some.html");
 			} else {
-				navigator.notification.alert("Your login failed", function() {});
+				navigator.notification.alert("Tu login ha fallado", function() {});
 			}
-	    	$("#submitButton").removeAttr("disabled");
+	    	$("#botonEnviar").removeAttr("disabled");
 		},"json");
 	} else {
-		navigator.notification.alert("You must enter a username and password", function() {});
-		$("#submitButton").removeAttr("disabled");
+		navigator.notification.alert("Debes ingresar usuario y contraseña", function() {});
+		$("#botonEnviar").removeAttr("disabled");
 	}
 	return false;
 }
 
 function deviceReady() {
 	
-    $("#loginForm").on("submit",handleLogin);
+    $("#loginForm").on("enviar",handleLogin);
 
 }

@@ -5,9 +5,9 @@ function init() {
 
 function deviceReady() {
  
-    $("#loginForm").on("submit",function(e) {
-    	//disable the button so we can't resubmit while we wait
-    	$("#submitButton",this).attr("disabled","disabled");
+    $("#loginForm").on("enviar",function(e) {
+    	//Deshabilitar botón para no reenviar mientras se espera
+    	$("#botonEnviar",this).attr("disabled","disabled");
         var u = $("#username", this).val();
         var p = $("#password", this).val();
         if(u != '' && p!= '') {
@@ -15,9 +15,9 @@ function deviceReady() {
         		if(res == true) {
         			$.mobile.changePage("some.html");
         		} else {
-        			navigator.notification.alert("Your login failed", function() {});
+        			navigator.notification.alert("Tu login ha fallado", function() {});
         		}
-	        	$("#submitButton").removeAttr("disabled");
+	        	$("#botonEnviar").removeAttr("disabled");
         	},"json");
         }
         return false;
